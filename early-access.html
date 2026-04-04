@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Early Access | BECOME Amsterdam App</title>
+  <meta name="description" content="Join the BECOME Amsterdam app early access list. Be the first to get your personalised training programme, step challenges and community access.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://become.amsterdam/early-access">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <style>
+    /* ── Page-specific styles ── */
+    .ea-page {
+      min-height: 100vh;
+      background: var(--black);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    /* Left: dark editorial panel */
+    .ea-left {
+      background: var(--black);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 140px 80px;
+      border-right: 1px solid rgba(255,255,255,0.05);
+    }
+    .ea-eyebrow {
+      font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase;
+      color: rgba(255,255,255,0.28); margin-bottom: 32px;
+    }
+    .ea-heading {
+      font-family: var(--serif); font-size: clamp(32px, 4vw, 60px);
+      font-weight: normal; color: var(--white); font-style: italic;
+      line-height: 1.15; margin-bottom: 32px;
+    }
+    .ea-body {
+      font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.45);
+      line-height: 2.6; letter-spacing: 0.02em; max-width: 360px;
+    }
+    .ea-features {
+      margin-top: 48px; list-style: none;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .ea-features li {
+      font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35); padding-left: 24px; position: relative;
+    }
+    .ea-features li::before { content: '—'; position: absolute; left: 0; color: rgba(255,255,255,0.2); }
+    /* Right: form panel */
+    .ea-right {
+      background: var(--off);
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 140px 80px;
+    }
+    .ea-form-title {
+      font-family: var(--serif); font-size: clamp(22px, 2.5vw, 36px);
+      font-weight: normal; color: var(--black); margin-bottom: 8px;
+    }
+    .ea-form-sub {
+      font-size: 10px; font-weight: 300; color: #888;
+      letter-spacing: 0.02em; margin-bottom: 48px;
+    }
+    /* Form */
+    .ea-form { display: flex; flex-direction: column; gap: 20px; }
+    .ea-field { display: flex; flex-direction: column; gap: 8px; }
+    .ea-field label {
+      font-size: 8px; letter-spacing: 0.38em; text-transform: uppercase; color: #888; font-weight: 400;
+    }
+    .ea-field input,
+    .ea-field select {
+      background: var(--white); border: 1px solid var(--off2);
+      border-radius: 0; padding: 14px 18px;
+      font-family: var(--sans); font-size: 11px; font-weight: 300;
+      color: var(--black); outline: none; width: 100%;
+      transition: border-color 0.3s;
+      -webkit-appearance: none; appearance: none;
+    }
+    .ea-field input:focus,
+    .ea-field select:focus { border-color: var(--black); }
+    .ea-field input::placeholder { color: #bbb; }
+    .ea-submit {
+      margin-top: 8px;
+      font-size: 9px; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--white); background: var(--black); border: 1px solid var(--black);
+      padding: 18px 36px; text-decoration: none; display: inline-block;
+      transition: all 0.3s; width: 100%; text-align: center;
+    }
+    .ea-submit:hover { background: transparent; color: var(--black); }
+    .ea-disclaimer {
+      font-size: 9px; font-weight: 300; color: #aaa;
+      line-height: 1.8; margin-top: 20px;
+    }
+    /* Success state */
+    .ea-success {
+      display: none; text-align: center; padding: 40px 0;
+    }
+    .ea-success.visible { display: block; }
+    .ea-success-icon {
+      font-family: var(--serif); font-size: 48px; color: var(--black);
+      font-style: italic; margin-bottom: 20px;
+    }
+    .ea-success h3 {
+      font-family: var(--serif); font-size: clamp(22px, 2.5vw, 32px);
+      font-weight: normal; color: var(--black); margin-bottom: 12px;
+    }
+    .ea-success p { font-size: 11px; color: #666; line-height: 2.2; }
+    @media (max-width: 900px) {
+      .ea-page { grid-template-columns: 1fr; }
+      .ea-left { padding: 120px 28px 64px; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+      .ea-right { padding: 64px 28px 100px; }
+    }
+  </style>
+</head>
+<body>
+<div id="cursor"></div>
+
+<nav id="nav" class="scrolled">
+  <a href="/" class="nav-logo">BECOME</a>
+  <ul class="nav-links">
+    <li><a href="/train.html">Train</a></li>
+    <li><a href="/connect.html">Connect</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="/#contact" class="nav-btn">Contact</a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" role="dialog">
+  <ul>
+    <li><a href="/train.html">Train</a></li>
+    <li><a href="/connect.html">Connect</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+</div>
+
+<main id="main-content">
+  <div class="ea-page">
+
+    <!-- LEFT PANEL -->
+    <div class="ea-left">
+      <p class="ea-eyebrow">BECOME Digital — Coming Soon</p>
+      <h1 class="ea-heading">Your programme,<br>everywhere.</h1>
+      <p class="ea-body">
+        The BECOME app brings your personal training programme wherever you are.
+        Amsterdam, London, Ibiza — your coach is with you.
+      </p>
+      <ul class="ea-features">
+        <li>Personalised training programmes</li>
+        <li>Video coaching &amp; technique feedback</li>
+        <li>Progress tracking &amp; analytics</li>
+        <li>10,000 steps daily challenge</li>
+        <li>Community access &amp; events agenda</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT PANEL: FORM -->
+    <div class="ea-right">
+      <div id="form-wrapper">
+        <h2 class="ea-form-title">Join the list.</h2>
+        <p class="ea-form-sub">Be first in when BECOME launches. No spam. Ever.</p>
+
+        <!--
+          FORMSPREE SETUP:
+          1. Go to formspree.io and create a free account
+          2. Create a new form → copy your form endpoint (looks like: https://formspree.io/f/xabcdefg)
+          3. Replace "YOUR_FORMSPREE_ID" below with your actual ID (e.g. "xabcdefg")
+          Done — submissions go straight to become.amsterdam@gmail.com
+        -->
+        <form class="ea-form" id="ea-form"
+              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              method="POST">
+
+          <div class="ea-field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required autocomplete="name">
+          </div>
+
+          <div class="ea-field">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+          </div>
+
+          <div class="ea-field">
+            <label for="goal">Primary goal</label>
+            <select id="goal" name="goal" required>
+              <option value="" disabled selected>Select your goal</option>
+              <option value="strength">Build strength</option>
+              <option value="performance">Improve performance</option>
+              <option value="conditioning">General conditioning</option>
+              <option value="weight">Body composition</option>
+              <option value="lifestyle">Healthy lifestyle</option>
+            </select>
+          </div>
+
+          <!-- Honeypot anti-spam — hidden from humans -->
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" value="BECOME App Early Access">
+
+          <button type="submit" class="ea-submit">Join Early Access</button>
+        </form>
+
+        <p class="ea-disclaimer">
+          Your details are only used to contact you about the BECOME app launch.
+          We never share your data with third parties.
+        </p>
+      </div>
+
+      <!-- SUCCESS STATE (shown after submit) -->
+      <div class="ea-success" id="ea-success">
+        <div class="ea-success-icon">✓</div>
+        <h3>You're on the list.</h3>
+        <p>
+          We'll be in touch as soon as BECOME launches.<br>
+          In the meantime — <a href="/train.html" style="color:var(--black);">start training</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script type="module" src="/src/main.js"></script>
+<script>
+  // Handle Formspree AJAX submission for smooth UX
+  const form = document.getElementById('ea-form');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.ea-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        document.getElementById('form-wrapper').style.display = 'none';
+        document.getElementById('ea-success').classList.add('visible');
+      } else {
+        btn.textContent = 'Try again';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
