@@ -223,8 +223,8 @@ nav:not(#nav) {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 .ticker-t { display: flex; animation: ticker 28s linear infinite; white-space: nowrap; width: max-content; }
-.ti { font-family: var(--serif); font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: rgba(255,255,255,0.2); padding: 0 24px; }
-.ts { color: rgba(255,255,255,0.09); margin: 0 8px; }
+.ti { font-family: var(--serif); font-size: 10px; letter-spacing: 0.38em; text-transform: uppercase; color: rgba(255,255,255,0.85); padding: 0 24px; }
+.ts { color: rgba(255,255,255,0.4); margin: 0 8px; }
 
 /* ─── QUOTE ─── */
 .q-sec {
@@ -272,7 +272,7 @@ nav:not(#nav) {
 }
 .s-lbl {
   font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase;
-  color: rgba(255,255,255,0.18); margin-bottom: 72px; text-align: center;
+  color: rgba(255,255,255,0.65); margin-bottom: 72px; text-align: center;
 }
 .p-row {
   display: flex; flex-direction: row; gap: 60px 80px;
