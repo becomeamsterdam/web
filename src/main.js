@@ -76,13 +76,6 @@ function initWAButton() {
     <span class="wa-label">Let's talk</span>
   `;
   document.body.appendChild(wa);
-
-  // Also update cursor tracking for the new button
-  const cursor = document.getElementById('cursor');
-  if (cursor) {
-    wa.addEventListener('mouseenter', () => cursor.classList.add('is-link'));
-    wa.addEventListener('mouseleave', () => cursor.classList.remove('is-link'));
-  }
 }
 
 // ─── INIT ───
