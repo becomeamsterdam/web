@@ -92,10 +92,12 @@ body.menu-open { overflow: hidden; }
   padding-top: 18px; padding-bottom: 18px;
 }
 .nav-logo {
-  font-family: var(--serif); font-size: 12px; letter-spacing: 0.55em;
-  color: var(--white); text-decoration: none; text-transform: uppercase;
-  font-style: italic; opacity: 0;
+  display: flex; align-items: center;
+  text-decoration: none; opacity: 0;
   animation: fadeInUp 0.8s 0.2s forwards;
+}
+.nav-logo img {
+  height: 28px; width: auto; display: block; filter: brightness(0) invert(1);
 }
 .nav-links {
   display: flex; gap: 44px; list-style: none;
@@ -518,8 +520,10 @@ footer {
   padding-top: 16px; /* extra breathing room at top of footer */
 }
 .ft-brand {
-  font-family: var(--serif); font-size: 20px; letter-spacing: 0.45em;
-  color: var(--white); font-style: italic;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.ft-brand img {
+  height: 32px; width: auto; display: block; filter: brightness(0) invert(1);
 }
 .ft-brand span {
   display: block; font-family: var(--sans); font-size: 9px; letter-spacing: 0.3em;
