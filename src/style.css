@@ -643,3 +643,63 @@ footer {
   .p-row { gap: 48px; }
   .b-anchor { padding: 80px 28px; }
 }
+
+/* ─── WHATSAPP FLOATING BUTTON ─── */
+#wa-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 190;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--black);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  padding: 13px 22px 13px 18px;
+  border-radius: 60px;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  /* Hidden by default — JS adds .wa-visible after scroll */
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease),
+              background 0.3s, border-color 0.3s, color 0.3s;
+}
+#wa-float.wa-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+#wa-float:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.3);
+  color: var(--white);
+}
+.wa-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: rgba(255,255,255,0.6);
+  transition: color 0.3s;
+}
+#wa-float:hover .wa-icon { color: var(--white); }
+.wa-label { white-space: nowrap; }
+
+/* Mobile: icon-only, no label */
+@media (max-width: 768px) {
+  #wa-float {
+    padding: 14px;
+    border-radius: 50%;
+    bottom: 24px;
+    right: 24px;
+  }
+  .wa-label { display: none; }
+  .wa-icon { width: 20px; height: 20px; }
+}
