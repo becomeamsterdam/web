@@ -9,6 +9,13 @@ function initCursor() {
   });
 
   document.querySelectorAll('a, button').forEach(el => {
+    // Prevent the inverted cursor blob from obfuscating primary buttons
+    if (el.classList.contains('btn-white') || 
+        el.classList.contains('btn-dark') || 
+        el.classList.contains('btn-outline') || 
+        el.classList.contains('nav-btn') ||
+        el.closest('#wa-float') || el.id === 'wa-float') return;
+
     el.addEventListener('mouseenter', () => cursor.classList.add('is-link'));
     el.addEventListener('mouseleave', () => cursor.classList.remove('is-link'));
   });
