@@ -175,7 +175,7 @@ nav:not(#nav) {
 }
 /* Optional hero background image with dark overlay */
 .hero.has-img {
-  background-image: url('/images/hero-bg.webp');
+  background-image: url('/images/hero-bg.png');
   background-size: cover; background-position: center;
 }
 .hero.has-img::before {
