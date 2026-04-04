@@ -76,14 +76,15 @@ body.menu-open { overflow: hidden; }
 @media (hover: none) { * { cursor: auto !important; } #cursor { display: none; } }
 
 /* ─── NAV ─── */
-nav {
+/* IMPORTANT: use #nav not 'nav' — footer also uses <nav> and would inherit position:fixed */
+#nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   display: flex; justify-content: space-between; align-items: center;
   padding: 28px 64px;
   transition: background 0.4s, backdrop-filter 0.4s, border-color 0.4s, padding 0.35s;
   border-bottom: 1px solid transparent;
 }
-nav.scrolled {
+#nav.scrolled {
   background: rgba(10,10,10,0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -119,6 +120,14 @@ nav.scrolled {
 }
 .nav-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.55); }
 
+/* Explicitly reset any <nav> that is NOT the main nav (e.g. footer nav) */
+nav:not(#nav) {
+  position: static;
+  background: none;
+  padding: 0;
+  border: none;
+}
+
 /* ─── HAMBURGER ─── */
 .hamburger {
   display: none; flex-direction: column; gap: 5px;
@@ -153,7 +162,7 @@ nav.scrolled {
 .mobile-menu a:hover { color: var(--white); }
 
 @media (max-width: 768px) {
-  nav { padding: 20px 24px; }
+  #nav { padding: 20px 24px; }
   .nav-links { display: none; }
   .hamburger { display: flex; }
 }
