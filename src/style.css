@@ -337,7 +337,7 @@ nav:not(#nav) {
 }
 
 /* ─── SPLIT ─── */
-.split { display: grid; grid-template-columns: 1fr 1fr; min-height: 60vh; }
+.split { display: grid; grid-template-columns: 1fr 1fr; }
 .split-img { overflow: hidden; background: var(--dark2); position: relative; }
 .split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .split-img-placeholder {
