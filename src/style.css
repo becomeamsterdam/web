@@ -375,6 +375,7 @@ nav:not(#nav) {
 .btn-outline:hover { color: var(--white); border-color: rgba(255,255,255,0.5); }
 @media (max-width: 768px) {
   .split { grid-template-columns: 1fr; }
+  .split-img { height: 60vh; }
   .split-img-placeholder { min-height: 55vw; }
   .split-txt { padding: 64px 28px; }
 }
