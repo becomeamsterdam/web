@@ -110,6 +110,11 @@ body.menu-open { overflow: hidden; }
 }
 .nav-links a:hover,
 .nav-links a.active { color: var(--white); }
+.nav-app-link {
+  font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(255,255,255,0.65); text-decoration: none; transition: color 0.3s;
+}
+.nav-app-link:hover { color: var(--white); }
 .nav-right {
   display: flex; align-items: center; gap: 20px;
   opacity: 0; animation: fadeInUp 0.8s 0.6s forwards;
