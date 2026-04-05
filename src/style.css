@@ -654,6 +654,12 @@ footer {
 .feat-card { padding: 48px 40px; background: var(--off); transition: background 0.3s; }
 .feat-card--dark { background: #111; }
 .feat-card--dark:hover { background: #141414; }
+.has-img .feat-card--dark {
+  background: rgba(15, 15, 15, 0.4);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.has-img .feat-card--dark:hover { background: rgba(25, 25, 25, 0.5); }
 .feat-card:not(.feat-card--dark):hover { background: var(--off2); }
 
 /* FIX: card numbers on dark — was #222 (invisible), raised to visible */
