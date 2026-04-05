@@ -329,10 +329,15 @@ nav:not(#nav) {
 .sbg-4 { background: linear-gradient(160deg, #141414 0%, #252525 45%, #0f0f0f 100%); }
 .sbg-5 { background: linear-gradient(160deg, #1f1f1f 0%, #333 50%, #161616 100%); }
 .sbg-6 { background: linear-gradient(160deg, #282828 0%, #111 60%, #1c1c1c 100%); }
+.s-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 40%);
+  pointer-events: none;
+}
 .s-card-label {
-  position: absolute; bottom: 20px; left: 20px;
-  font-size: 8px; letter-spacing: 0.4em; text-transform: uppercase;
-  color: rgba(255,255,255,0.2);
+  position: absolute; bottom: 20px; left: 20px; z-index: 2;
+  font-size: 8px; font-weight: 500; letter-spacing: 0.45em; text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
 }
 
 /* ─── MARQUEE ─── */
