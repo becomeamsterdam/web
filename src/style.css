@@ -590,6 +590,12 @@ footer {
 .pg-section--off   { background: var(--off); }
 .pg-section--white { background: var(--white); }
 .pg-inner { max-width: 820px; margin: 0 auto; }
+.pg-section.has-img { position: relative; background-size: cover; background-position: center; }
+.pg-section.has-img::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.4) 100%);
+}
+.pg-section.has-img .pg-inner { position: relative; z-index: 2; }
 
 /* Labels / eyebrows */
 .pg-eyebrow {
