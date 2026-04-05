@@ -171,6 +171,7 @@ nav:not(#nav) {
 @media (max-width: 768px) {
   #nav { padding: 20px 24px; }
   .nav-links { display: none; }
+  .nav-app-link { display: none; }
   .hamburger { display: flex; }
 }
 
