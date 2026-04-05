@@ -276,8 +276,14 @@ nav:not(#nav) {
 /* ─── PILLARS ─── */
 .pillars {
   background: var(--black); padding: 130px 40px;
-  display: flex; flex-direction: column; align-items: center;
+  display: flex; flex-direction: column; align-items: center; position: relative;
 }
+.pillars.has-img { background-size: cover; background-position: center; }
+.pillars.has-img::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to bottom, rgba(10,10,10,0.9), rgba(10,10,10,0.6));
+}
+.pillars.has-img > * { position: relative; z-index: 2; }
 .s-lbl {
   font-size: 9px; letter-spacing: 0.45em; text-transform: uppercase;
   color: rgba(255,255,255,0.65); margin-bottom: 72px; text-align: center;
