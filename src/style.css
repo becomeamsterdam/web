@@ -337,7 +337,7 @@ nav:not(#nav) {
 }
 
 /* ─── SPLIT ─── */
-.split { display: grid; grid-template-columns: 1fr 1fr; min-height: 75vh; }
+.split { display: grid; grid-template-columns: 1fr 1fr; min-height: 60vh; }
 .split-img { overflow: hidden; background: var(--dark2); position: relative; }
 .split-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .split-img-placeholder {
@@ -350,7 +350,7 @@ nav:not(#nav) {
 }
 .split-txt {
   background: var(--black); display: flex; flex-direction: column;
-  justify-content: center; padding: 100px 72px;
+  justify-content: center; padding: 80px 72px;
 }
 .split-eyebrow {
   font-size: 9px; letter-spacing: 0.4em; text-transform: uppercase;
