@@ -246,11 +246,30 @@ nav:not(#nav) {
   font-weight: normal; letter-spacing: 0.02em; color: var(--black); line-height: 1.5;
 }
 .q-sub {
-  font-family: var(--serif); font-size: clamp(12px, 1vw, 15px);
-  letter-spacing: 0.38em; text-transform: uppercase; color: #999; font-style: italic; margin-top: 4px;
+  margin-top: 18px;
 }
-.q-sub a { color: #999; text-underline-offset: 4px; transition: color 0.3s; text-decoration: underline; }
-.q-sub a:hover { color: var(--black); }
+.q-sub a {
+  min-width: min(100%, 280px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 17px 34px;
+  border: 1px solid rgba(0,0,0,0.18);
+  color: var(--black);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.q-sub a:hover {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+}
 .q-divider { width: 30px; height: 1px; background: var(--off2); margin: 8px 0; }
 .q-extra {
   font-family: var(--serif); font-size: clamp(15px, 1.7vw, 25px);
@@ -435,9 +454,12 @@ nav:not(#nav) {
   background: var(--off); padding: 36px 28px;
   font-family: var(--serif); font-size: clamp(14px, 1.2vw, 17px);
   font-weight: normal; letter-spacing: 0.03em; line-height: 1.5; color: var(--black);
-  transition: background 0.3s;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s, transform 0.3s;
 }
-.c-block:hover { background: var(--off2); }
+.c-block:hover { background: var(--off2); transform: translateY(-2px); }
+.c-block:focus-visible { outline: 1px solid var(--black); outline-offset: 4px; }
 .c-block-sub {
   display: block; font-family: var(--sans); font-size: 8px;
   letter-spacing: 0.3em; text-transform: uppercase; color: #aaa; margin-top: 8px;
@@ -686,6 +708,212 @@ footer {
 
 .split-pg { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 60vh; }
 @media (max-width: 768px) { .pg-section { padding: 80px 24px; } .split-pg { grid-template-columns: 1fr; } }
+
+/* ─── CONTACT PAGE ─── */
+.contact-layout {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  gap: 80px;
+  align-items: start;
+}
+.contact-actions {
+  margin-top: 44px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn-light-outline {
+  font-size: 9px; font-weight: 400; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--black); border: 1px solid rgba(0,0,0,0.18);
+  padding: 16px 32px; text-decoration: none; display: inline-block; transition: all 0.3s;
+}
+.btn-light-outline:hover { border-color: var(--black); background: var(--black); color: var(--white); }
+.contact-details {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.contact-details a {
+  font-size: 11px;
+  font-weight: 300;
+  color: #555;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+.contact-details a:hover { color: var(--black); }
+.contact-panel {
+  background: var(--off);
+  padding: 48px;
+}
+.contact-form-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.6vw, 36px);
+  font-weight: normal;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.contact-form-sub {
+  font-size: 10px;
+  font-weight: 300;
+  color: #888;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-field label {
+  font-size: 8px;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: #888;
+  font-weight: 400;
+}
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  background: var(--white);
+  border: 1px solid var(--off2);
+  color: var(--black);
+  padding: 16px 18px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+.contact-field textarea { resize: vertical; min-height: 150px; line-height: 1.7; }
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  border-color: rgba(0,0,0,0.35);
+  background: #fff;
+}
+.contact-submit {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--black);
+  border: 1px solid var(--black);
+  padding: 18px 36px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s;
+  width: 100%;
+  text-align: center;
+}
+.contact-submit:hover:not(:disabled) { background: transparent; color: var(--black); }
+.contact-submit:disabled { opacity: 0.55; cursor: wait; }
+.contact-success {
+  display: none;
+  min-height: 420px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-success.visible { display: flex; }
+.contact-route-grid a { text-decoration: none; }
+.contact-route-card { display: block; }
+
+/* ─── ABOUT / TRAINER BIOS ─── */
+.trainer-bio-grid {
+  max-width: 1180px;
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2px;
+}
+.trainer-bio {
+  background: var(--off);
+  padding: 48px 40px;
+}
+.trainer-role {
+  font-size: 8px;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 22px;
+}
+.trainer-bio h3 {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.6vw, 38px);
+  font-weight: normal;
+  color: var(--black);
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.trainer-bio p:not(.trainer-role) {
+  font-size: 11px;
+  font-weight: 300;
+  color: #666;
+  line-height: 2.35;
+  letter-spacing: 0.01em;
+}
+.trainer-bio p + p { margin-top: 20px; }
+
+/* ─── BUSINESS PAGE ─── */
+.business-offer-grid {
+  max-width: 1180px;
+  margin: 64px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2px;
+}
+.business-offer {
+  background: var(--white);
+  padding: 44px 36px;
+}
+.business-offer--wide { grid-column: span 3; }
+.business-offer span {
+  display: block;
+  font-family: var(--serif);
+  font-size: 11px;
+  font-style: italic;
+  letter-spacing: 0.2em;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+.business-offer h3 {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2vw, 26px);
+  font-weight: normal;
+  color: var(--black);
+  margin-bottom: 14px;
+  font-style: italic;
+}
+.business-offer p {
+  font-size: 11px;
+  font-weight: 300;
+  color: #666;
+  line-height: 2.25;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr; gap: 56px; }
+  .trainer-bio-grid { grid-template-columns: 1fr; }
+  .business-offer-grid { grid-template-columns: 1fr; }
+  .business-offer--wide { grid-column: auto; }
+}
+@media (max-width: 768px) {
+  .contact-panel { padding: 32px 24px; }
+  .contact-actions { flex-direction: column; align-items: stretch; }
+  .contact-actions a { text-align: center; }
+}
 
 /* ─── RESPONSIVE MISC ─── */
 @media (max-width: 768px) {

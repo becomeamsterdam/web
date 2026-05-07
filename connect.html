@@ -51,11 +51,11 @@
   <ul class="nav-links">
     <li><a href="/train">Train</a></li>
     <li><a href="/connect" style="color:rgba(255,255,255,0.9)">Connect</a></li>
-    <li><a href="/about">Become</a></li>
+    <li><a href="/become">Become</a></li>
   </ul>
   <div class="nav-right">
     <a href="/early-access" class="nav-app-link">App</a>
-    <a href="/#contact" class="nav-btn">Contact</a>
+    <a href="/contact" class="nav-btn">Contact</a>
     <button class="hamburger" id="hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
@@ -66,9 +66,9 @@
   <ul>
     <li><a href="/train">Train</a></li>
     <li><a href="/connect">Connect</a></li>
-    <li><a href="/about">Become</a></li>
+    <li><a href="/become">Become</a></li>
     <li><a href="/early-access">App / Digital</a></li>
-    <li><a href="/#contact">Contact</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 </div>
 
@@ -87,17 +87,22 @@
       <p class="pg-eyebrow reveal">The BECOME community</p>
       <h2 class="pg-heading reveal rd1">Movement breaks patterns.</h2>
       <p class="pg-body reveal rd2">
-        BECOME is more than personal training. It's a network and social environment built around
-        shared ambition, physical effort and genuine human connection.
+        Amsterdam was once the diamond capital of the world. The finest stones in existence
+        passed through this city. They arrived rough, unpolished and unrecognized. And here,
+        under the highest pressure, in the hands of those who knew what they were looking at,
+        they were cut. Shaped. Made to shine.
       </p>
       <p class="pg-body reveal rd2">
-        We organise exclusive events throughout the year — sport clinics, network evenings,
-        group training sessions and duo programmes — all designed to bring together like-minded
-        professionals in a way that feels earned.
+        That is not just a story about stones. That is a story about people. About what happens
+        when you put the right pressure, in the right environment, with the right people around you.
+      </p>
+      <p class="pg-body reveal rd2">
+        At BECOME, we believe every person in this community is a diamond. Training creates
+        the pressure. Community creates the environment. Connection does the polishing.
       </p>
       <p class="pg-body reveal rd2" style="font-family:var(--serif);font-style:italic;color:rgba(0,0,0,0.4);margin-top:24px;">
-        This is not your average networking event.<br>
-        Energy. Focus. Real connection.
+        A group of like-minded individuals who train, connect, and grow together.<br>
+        All part of one movement.
       </p>
     </div>
   </section>
@@ -109,22 +114,22 @@
       <h2 class="pg-heading reveal rd1">Four ways to connect.</h2>
     </div>
     <div class="feat-grid">
-      <div class="feat-card reveal">
+      <div class="feat-card reveal" id="sport-clinics">
         <div class="feat-card-num">01</div>
         <h3>Sport Clinics</h3>
         <p>Technique-focused group sessions led by BECOME coaches. Learn the fundamentals of strength training in a focused, premium environment. Open to all levels.</p>
       </div>
-      <div class="feat-card reveal rd1">
+      <div class="feat-card reveal rd1" id="network-events">
         <div class="feat-card-num">02</div>
         <h3>Network Events</h3>
         <p>Four times a year, BECOME brings together ambitious professionals for an exclusive event combining movement and meaningful conversation. BECOME × Entrepreneurs.</p>
       </div>
-      <div class="feat-card reveal rd2">
+      <div class="feat-card reveal rd2" id="group-training">
         <div class="feat-card-num">03</div>
         <h3>Group Training</h3>
         <p>Small group strength sessions — the energy of training together, the quality of individual coaching. Maximum 6 participants per session.</p>
       </div>
-      <div class="feat-card reveal rd3">
+      <div class="feat-card reveal rd3" id="duo-training">
         <div class="feat-card-num">04</div>
         <h3>Duo Training</h3>
         <p>Train with a friend, partner or colleague. Same premium coaching, shared energy. The best way to stay accountable and make training something you actually look forward to.</p>
@@ -132,29 +137,8 @@
     </div>
   </section>
 
-  <!-- STATEMENT -->
-  <section class="pg-section pg-section--dark has-img" style="background-image: url('/images/connect2-hero.png');">
-    <div class="pg-inner">
-      <p class="pg-eyebrow pg-eyebrow--dark reveal">The philosophy</p>
-      <h2 class="pg-heading pg-heading--white reveal rd1">We don't build memberships.<br>We build friendships.</h2>
-      <p class="pg-body pg-body--dark reveal rd2">
-        Every BECOME event is curated, limited and intentional. We don't fill rooms — we
-        build rooms worth being in. The people who come to BECOME events are driven,
-        interesting and serious about how they spend their time.
-      </p>
-      <p class="pg-body pg-body--dark reveal rd2">
-        The community grows naturally, session by session, event by event — because
-        when people train together with genuine focus, real friendships follow.
-      </p>
-      <div class="pg-cta reveal rd3">
-        <a href="https://www.instagram.com/become_amsterdam" target="_blank" rel="noopener" class="btn-white">Follow @become_amsterdam</a>
-        <a href="https://wa.me/31653829897?text=Hi%20BECOME%2C%20I%27d%20like%20to%20get%20more%20info%20about%20upcoming%20events" target="_blank" rel="noopener" class="btn-outline">Get event info</a>
-      </div>
-    </div>
-  </section>
-
   <!-- NEXT EVENT PLACEHOLDER -->
-  <section class="pg-section pg-section--off" style="text-align:center;">
+  <section class="pg-section pg-section--white" style="text-align:center;">
     <div class="pg-inner" style="text-align:center;">
       <p class="pg-eyebrow reveal" style="text-align:center;">Next event</p>
       <h2 class="pg-heading reveal rd1" style="text-align:center;">Stay tuned.</h2>
@@ -185,7 +169,9 @@
           <li><a href="/">Home</a></li>
           <li><a href="/train">Train</a></li>
           <li><a href="/connect">Connect</a></li>
-          <li><a href="/about">About</a></li>
+          <li><a href="/business">Business</a></li>
+          <li><a href="/become">Become</a></li><li><a href="/about-us">About us</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
       <div class="ft-col">
