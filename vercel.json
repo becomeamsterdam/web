@@ -3,18 +3,14 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "http://become.amsterdam/(.*)",
-      "destination": "https://become.amsterdam/$1",
-      "permanent": true
-    },
-    {
-      "source": "http://www.become.amsterdam/(.*)",
-      "destination": "https://become.amsterdam/$1",
-      "permanent": true
-    },
-    {
-      "source": "https://www.become.amsterdam/(.*)",
-      "destination": "https://become.amsterdam/$1",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.become.amsterdam"
+        }
+      ],
+      "destination": "https://become.amsterdam/:path*",
       "permanent": true
     }
   ],
