@@ -695,6 +695,12 @@ footer {
   margin-bottom: 20px; font-style: italic; letter-spacing: 0.2em;
 }
 .feat-card-num--dark { color: rgba(255,255,255,0.2); }
+.feat-card-title {
+  font-size: clamp(17px, 1.8vw, 22px);
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.92);
+}
 
 .feat-card h3 {
   font-family: var(--serif); font-size: clamp(18px, 2.2vw, 26px);
