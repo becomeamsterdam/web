@@ -330,6 +330,9 @@ nav:not(#nav) {
 .pt-body p + p {
   margin-top: 34px;
 }
+.pt-cta {
+  margin-top: 48px;
+}
 
 /* ─── MANIFESTO ─── */
 .manifesto {
