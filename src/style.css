@@ -97,10 +97,13 @@ body.menu-open { overflow: hidden; }
   animation: fadeInUp 0.8s 0.2s forwards;
 }
 .nav-logo img {
-  height: 28px; width: auto; display: block; filter: brightness(0) invert(1);
+  width: 100px; height: 46px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 .nav-links {
-  display: flex; gap: 44px; list-style: none;
+  display: flex; gap: 36px; list-style: none;
   opacity: 0; animation: fadeInUp 0.8s 0.4s forwards;
 }
 .nav-links a {
@@ -274,6 +277,58 @@ nav:not(#nav) {
 .q-extra {
   font-family: var(--serif); font-size: clamp(15px, 1.7vw, 25px);
   color: rgba(0,0,0,0.3); line-height: 1.7;
+}
+
+/* ─── PERSONAL TRAINING ─── */
+.personal-training {
+  background: #1a1a1a;
+  color: var(--white);
+  padding: 132px 64px 150px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.pt-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.pt-label {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.38em;
+  line-height: 1.8;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.64);
+  margin-bottom: 38px;
+}
+.pt-title {
+  max-width: 760px;
+  font-family: var(--serif);
+  font-size: 72px;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 30px;
+}
+.pt-location {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-style: italic;
+  line-height: 1.3;
+  color: rgba(255,255,255,0.64);
+  margin-bottom: 44px;
+}
+.pt-body {
+  max-width: 1040px;
+  color: rgba(255,255,255,0.68);
+}
+.pt-body p {
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 2;
+}
+.pt-body p + p {
+  margin-top: 34px;
 }
 
 /* ─── MANIFESTO ─── */
@@ -575,7 +630,10 @@ footer {
   display: flex; flex-direction: column; gap: 4px;
 }
 .ft-brand img {
-  height: 32px; width: auto; display: block; filter: brightness(0) invert(1);
+  width: 132px; height: 72px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
 .ft-brand span {
   display: block; font-family: var(--sans); font-size: 9px; letter-spacing: 0.3em;
@@ -924,6 +982,11 @@ footer {
 /* ─── RESPONSIVE MISC ─── */
 @media (max-width: 768px) {
   .q-sec { padding: 100px 28px; }
+  .personal-training { padding: 92px 20px 104px; }
+  .pt-label { margin-bottom: 34px; }
+  .pt-title { font-size: 52px; line-height: 1.08; margin-bottom: 28px; }
+  .pt-location { font-size: 30px; margin-bottom: 38px; }
+  .pt-body p { font-size: 19px; line-height: 1.9; }
   .manifesto { padding: 100px 28px; }
   .pillars { padding: 100px 28px; }
   .p-row { gap: 48px; }
