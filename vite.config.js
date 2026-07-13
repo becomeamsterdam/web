@@ -17,6 +17,9 @@ export default defineConfig({
         groupTraining: resolve(__dirname, 'group-training.html'),
         duoTraining:  resolve(__dirname, 'duo-training.html'),
         earlyAccess:  resolve(__dirname, 'early-access.html'),
+        support:      resolve(__dirname, 'support.html'),
+        privacy:      resolve(__dirname, 'privacy.html'),
+        terms:        resolve(__dirname, 'terms.html'),
       }
     }
   }

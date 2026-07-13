@@ -897,6 +897,82 @@ footer {
 .contact-route-grid a { text-decoration: none; }
 .contact-route-card { display: block; }
 
+/* ─── LEGAL / SUPPORT PAGES ─── */
+.legal-hero { min-height: 420px; }
+.legal-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.legal-updated {
+  font-size: 9px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 48px;
+}
+.legal-section {
+  padding-top: 42px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+.legal-section + .legal-section { margin-top: 42px; }
+.legal-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: normal;
+  font-style: italic;
+  line-height: 1.08;
+  color: var(--black);
+  margin-bottom: 22px;
+}
+.legal-section p {
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 2.15;
+  color: #555;
+  letter-spacing: 0.01em;
+}
+.legal-section p + p { margin-top: 14px; }
+.legal-section strong {
+  color: var(--black);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.legal-section a {
+  color: var(--black);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+.legal-nav {
+  margin-top: 56px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.legal-nav a {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--black);
+  border: 1px solid rgba(0,0,0,0.22);
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.legal-nav a:hover {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+@media (max-width: 768px) {
+  .legal-section { padding-top: 34px; }
+  .legal-section + .legal-section { margin-top: 34px; }
+  .legal-nav { flex-direction: column; }
+  .legal-nav a { text-align: center; }
+}
+
 /* ─── ABOUT / TRAINER BIOS ─── */
 .trainer-bio-grid {
   max-width: 1180px;

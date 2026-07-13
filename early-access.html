@@ -96,6 +96,15 @@
       font-size: 9px; font-weight: 300; color: #aaa;
       line-height: 1.8; margin-top: 20px;
     }
+    .ea-legal {
+      display: flex; flex-wrap: wrap; gap: 16px;
+      margin-top: 18px;
+    }
+    .ea-legal a {
+      font-size: 8px; letter-spacing: 0.24em; text-transform: uppercase;
+      color: #777; text-decoration: none; transition: color 0.3s;
+    }
+    .ea-legal a:hover { color: var(--black); }
     /* Success state */
     .ea-success {
       display: none; text-align: center; padding: 40px 0;
@@ -220,6 +229,11 @@
           Your details are only used to contact you about the BECOME app launch.
           We never share your data with third parties.
         </p>
+        <div class="ea-legal" aria-label="App legal links">
+          <a href="/support">Support</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+        </div>
       </div>
 
       <!-- SUCCESS STATE (shown after submit) -->
